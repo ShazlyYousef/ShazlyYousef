@@ -30,6 +30,7 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 nav {
@@ -51,7 +52,6 @@ nav {
 .logo {
     font-weight: 700;
     font-size: 1.2rem;
-    letter-spacing: 1px;
 }
 
 .logo span {
@@ -87,25 +87,24 @@ button#theme-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 8%;
-    min-height: 85vh;
+    padding: 60px 10%;
+    min-height: 80vh;
+    gap: 30px;
 }
 
-.highlight {
-    color: var(--main);
-    font-weight: 600;
-}
-
-.hero-text h5 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #888;
+.hero-text {
+    flex: 1;
 }
 
 .hero-text h1 {
     font-size: 3.5rem;
     margin: 10px 0;
     font-weight: 700;
+}
+
+.highlight {
+    color: var(--main);
+    font-weight: 600;
 }
 
 .hero-btns {
@@ -129,14 +128,15 @@ button#theme-toggle {
     color: var(--main);
 }
 
-.btn-outline:hover {
-    background: var(--main);
-    color: #0b1120;
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero-img .img-border {
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
     border: 4px solid var(--main);
     padding: 10px;
@@ -151,7 +151,7 @@ button#theme-toggle {
 }
 
 .container {
-    padding: 80px 8%;
+    padding: 80px 10%;
 }
 
 .title {
@@ -159,16 +159,6 @@ button#theme-toggle {
     margin-bottom: 40px;
     text-align: center;
     font-weight: 700;
-}
-
-.title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--main);
-    margin: 10px auto 0;
-    border-radius: 2px;
 }
 
 .grid {
@@ -182,131 +172,40 @@ button#theme-toggle {
     padding: 30px;
     border-radius: 15px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--main);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-}
-
-.icon {
-    font-size: 2rem;
-    color: var(--main);
-    margin-bottom: 15px;
-}
-
-.card h3, .card h4 {
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.card ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.card li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.card li::before {
-    content: '▹';
-    color: var(--main);
-    font-weight: bold;
-}
-
-.project span {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--main);
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.contact-box {
-    text-align: center;
-    background: var(--card-bg);
-    padding: 50px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-}
-
-.contact-box p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.contact-box i {
-    color: var(--main);
-    margin-right: 10px;
-}
-
-.social {
-    margin-top: 30px;
-    font-size: 1.8rem;
-}
-
-.social a {
-    color: var(--text);
-    margin: 0 15px;
-}
-
-.social a:hover {
-    color: var(--main);
-    transform: scale(1.1);
-    display: inline-block;
 }
 
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: 15px;
         padding: 15px;
+        width: 95%;
         border-radius: 20px;
     }
-    
+
     .nav-links {
+        margin-top: 10px;
+        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px 15px;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
     }
 
     .hero {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         text-align: center;
-        padding: 40px 5%;
-        gap: 40px;
+        padding: 40px 20px;
     }
 
     .hero-text h1 {
-        font-size: 2.2rem; 
-    }
-
-    .hero-btns {
-        justify-content: center;
-        flex-wrap: wrap;
+        font-size: 2.2rem;
     }
 
     .hero-img .img-border {
         width: 250px;
         height: 250px;
+        margin: 0 auto;
     }
 
-    .container {
-        padding: 50px 5%;
-    }
-
-    .title {
-        font-size: 2rem;
+    .hero-btns {
+        justify-content: center;
     }
 }
