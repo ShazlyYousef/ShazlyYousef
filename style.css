@@ -1,0 +1,264 @@
+:root {
+    --bg: #f8f9fa;
+    --text: #333333;
+    --main: #007bff;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+}
+
+body.dark-mode {
+    --bg: #0b1120;
+    --text: #f1f5f9;
+    --main: #38bdf8;
+    --card-bg: #1e293b;
+    --border: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px; 
+    position: relative; 
+    background: var(--bg);
+    z-index: 1000; 
+    border-radius: 50px; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--main);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--main);
+}
+
+button#theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    min-height: 85vh;
+}
+
+.highlight {
+    color: var(--main);
+    font-weight: 600;
+}
+
+.hero-text h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: var(--main);
+    color: #0b1120;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--main);
+    color: var(--main);
+}
+
+.btn-outline:hover {
+    background: var(--main);
+    color: #0b1120;
+}
+
+.hero-img .img-border {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 4px solid var(--main);
+    padding: 10px;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container {
+    padding: 80px 8%;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--main);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--main);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--main);
+    margin-bottom: 15px;
+}
+
+.card h3, .card h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.card li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card li::before {
+    content: '▹';
+    color: var(--main);
+    font-weight: bold;
+}
+
+.project span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--main);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.contact-box {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-box i {
+    color: var(--main);
+    margin-right: 10px;
+}
+
+.social {
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.social a {
+    color: var(--text);
+    margin: 0 15px;
+}
+
+.social a:hover {
+    color: var(--main);
+    transform: scale(1.1);
+    display: inline-block;
+}
